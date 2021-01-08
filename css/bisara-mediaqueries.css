@@ -8,15 +8,69 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
   .header-right .header-right-wrapper .nav-link {
     padding: 0.5rem 0.8rem;
   }
+  .main-hero-container h1 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-top: 0.5rem;
+  }
+  .main-hero-container .main-hero-picture img {
+    margin-top: -2rem;
+  }
 }
 /* --------------------------------------------------------------
 MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
 -------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .main-hero-container h1 {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .main-hero-container h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  .main-hero-container {
+    padding: 10vh 1rem;
+    padding-top: 10vh;
+  }
+  .main-hero-container .main-hero-picture {
+    text-align: center;
+  }
+  .main-hero-container .main-hero-picture img {
+    margin-top: 0;
+    max-width: 70%;
+  }
+}
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 600px
 -------------------------------------------------------------- */
 @media (max-width: 533px) {
   .header-mobile-right-wrapper {
     padding: 0 5.5vw;
+  }
+  .main-hero-container h1 {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 424px) {
+  .main-hero-container .main-hero-picture img {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .main-hero-container h1 {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
