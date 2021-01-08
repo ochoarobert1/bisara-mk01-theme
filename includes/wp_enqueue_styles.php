@@ -69,7 +69,7 @@ function bisara_load_css() {
         //wp_enqueue_style('swiper-css');
 
         /*- GOOGLE FONTS -*/
-        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap', false, $version_remove, 'all');
+        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;900&display=swap', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');
 
         /*- MAIN STYLE -*/

@@ -23,18 +23,16 @@
     <meta name="theme-color" content="#454545" />
     <?php /* AUTHOR INFORMATION */ ?>
     <meta name="language" content="<?php echo get_bloginfo('language'); ?>" />
-    <meta name="author" content="ADMIN_SITIO" />
-    <meta name="copyright" content="DIRECCION_URL" />
-    <meta name="geo.position" content="10.333333;-67.033333" />
-    <meta name="ICBM" content="10.333333, -67.033333" />
-    <meta name="geo.region" content="VE" />
-    <meta name="geo.placename" content="DIRECCION_AUTOR" />
-    <meta name="DC.title" content="<?php if (is_home()) { echo get_bloginfo('name') . ' | ' . get_bloginfo('description'); } else { echo get_the_title() . ' | ' . get_bloginfo('name'); } ?>" />
+    <meta name="DC.title" content="<?php if (is_home()) {
+                                        echo get_bloginfo('name') . ' | ' . get_bloginfo('description');
+                                    } else {
+                                        echo get_the_title() . ' | ' . get_bloginfo('name');
+                                    } ?>" />
     <?php /* MAIN TITLE - CALL HEADER MAIN FUNCTIONS */ ?>
     <?php wp_title('|', false, 'right'); ?>
     <?php wp_head() ?>
     <?php /* OPEN GRAPHS INFO - COMMENTS SCRIPTS */ ?>
-    <?php if ( is_single('post') && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+    <?php if (is_single('post') && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
     <?php /* IE COMPATIBILITIES */ ?>
     <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7" /><![endif]-->
     <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8" /><![endif]-->
@@ -53,34 +51,64 @@
     <header class="container-fluid p-0" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <div class="row no-gutters">
             <div class="the-header col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <nav class="navbar navbar-expand-md" role="navigation">
-                    <a class="navbar-brand" href="<?php echo home_url('/');?>" title="<?php echo get_bloginfo('name'); ?>">
-                        <?php $custom_logo_id = get_theme_mod( 'custom_logo' ); ?>
-                        <?php $image = wp_get_attachment_image_src( $custom_logo_id , 'logo' ); ?>
-                        <?php if (!empty($image)) { ?>
-                        <img src="<?php echo $image[0];?>" alt="<?php echo get_bloginfo('name'); ?>" class="img-fluid img-logo" />
-                        <?php } else { ?>
-                        Navbar
-                        <?php } ?>
-                    </a>
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <?php
-                        wp_nav_menu( array(
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="header-mobile-social-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-none d-lg-none d-md-block d-sm-block d-block">
+                            <a href=""><i class="fa fa-instagram"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                        <div class="header-left col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
+                            <a href="<?php echo home_url('/'); ?>" title="<?php echo get_bloginfo('name'); ?>">
+                                <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
+                                <?php $image = wp_get_attachment_image_src($custom_logo_id, 'logo'); ?>
+                                <?php if (!empty($image)) { ?>
+                                <img src="<?php echo $image[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>" class="img-fluid img-logo" />
+                                <?php } else { ?>
+                                Navbar
+                                <?php } ?>
+                            </a>
+                        </div>
+                        <div class="header-right col-xl-8 col-lg-8 col-md-8 col-sm-4 col-4">
+                            <div class="header-mobile-icon d-xl-none d-lg-none d-md-none d-sm-block d-block">
+                                <button id="menuMobileBtn">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                            </div>
+                            <div class="header-right-wrapper d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+                                <nav class="header-menu-container">
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'theme_location'  => 'header_menu',
+                                        'depth'           => 2,
+                                        'container'       => 'div',
+                                        'menu_class'      => 'nav'
+                                    ));
+                                    ?>
+                                </nav>
+                                <div class="header-social-container d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                                    <a href=""><i class="fa fa-instagram"></i></a>
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                    <a href=""><i class="fa fa-facebook"></i></a>
+                                    <a href=""><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menuMobile" class="header-mobile-right-wrapper header-mobile-hidden d-xl-none d-lg-none d-md-none d-sm-block d-block">
+                    <nav class="header-menu-container">
+                        <?php
+                        wp_nav_menu(array(
                             'theme_location'  => 'header_menu',
-                            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                            'depth'           => 2,
                             'container'       => 'div',
-                            'container_class' => 'collapse navbar-collapse',
-                            'container_id'    => 'bs-example-navbar-collapse-1',
-                            'menu_class'      => 'navbar-nav ml-auto',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'          => new WP_Bootstrap_Navwalker(),
-                        ) );
+                            'menu_class'      => 'navbar-nav'
+                        ));
                         ?>
-
-                </nav>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>

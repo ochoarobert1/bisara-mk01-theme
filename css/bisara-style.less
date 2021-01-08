@@ -11,6 +11,7 @@ VARIABLES
 @secondfont: 'Open Sans', sans-serif;
 @black: #000000;
 @white: #ffffff;
+@red: #B70000;
 
 /* --------------------------------------------------------------
 BODY DEFAULTS
@@ -37,6 +38,7 @@ a {
     .transition(all .2s ease-in-out);
 
     &:hover {
+        color: @red;
         text-decoration: none;
     }
 }
@@ -78,6 +80,101 @@ a {
 /* --------------------------------------------------------------
 1.- HEADER
 -------------------------------------------------------------- */
+.the-header {
+    position: relative;
+    background-color: @white;
+    padding: 1rem;
+}
+
+.header-left {}
+
+.header-right {
+    & .header-right-wrapper {
+        .display(flex);
+        align-items: center;
+        justify-content: flex-end;
+
+        & .nav-link {
+            color: @black;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 0.9rem;
+
+            &:hover {
+                color: @red;
+            }
+        }
+    }
+
+    & .header-social-container {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+
+        & a {
+            color: @black;
+            padding: 0 1rem;
+
+            &:hover {
+                color: @red;
+            }
+        }
+    }
+}
+
+.header-mobile-social-container {
+    text-align: right;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+
+    & a {
+        color: @black;
+        padding: 0 .5rem;
+
+        &:hover {
+            color: @red;
+        }
+    }
+}
+
+.header-mobile-icon {
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
+
+    & #menuMobileBtn {
+        background: none;
+        border: 0;
+    }
+}
+
+.header-mobile-right-wrapper {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    padding: 0 8.5vw;
+
+    & .nav-link {
+        color: @black;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 0.9rem;
+
+        &:hover {
+            color: @red;
+        }
+    }
+}
+
+.header-mobile-hidden {
+    z-index: -1;
+    top: 0;
+}
+
+
+
 
 /* --------------------------------------------------------------
 2.- FOOTER
