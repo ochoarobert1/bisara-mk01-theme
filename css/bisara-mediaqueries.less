@@ -30,6 +30,10 @@ MEDIAQUERIES LG/MD - LAYOUTS BIGGER THAN 992px
     .main-hero-container .main-hero-picture img {
         margin-top: -2rem;
     }
+
+    .row-about .main-about-item .main-about-item-wrapper {
+        padding: 1rem 1rem;
+    }
 }
 
 @media (max-width: 1170px) {}
@@ -46,6 +50,25 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         font-size: 1.7rem;
         line-height: 2.8rem;
         margin-top: 1rem;
+    }
+
+    .main-about-container {
+        padding: 3vh 1rem;
+    }
+
+    .row-about article:nth-child(1) {
+        padding-right: 1rem;
+    }
+
+    .row-about article:nth-child(2) {
+        padding-left: 1rem;
+    }
+
+    .row-about .main-about-item .main-about-item-wrapper {
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
+        padding-bottom: 0;
+        line-height: 2.3rem;
     }
 }
 
@@ -75,6 +98,14 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
         margin-top: 0;
         max-width: 70%;
     }
+
+    .main-about-item picture {
+        text-align: center;
+    }
+
+    .main-about-item picture img {
+        max-width: 70%;
+    }
 }
 
 /* --------------------------------------------------------------
@@ -94,11 +125,22 @@ MEDIAQUERIES XS - LAYOUTS LESS THAN 600px
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
+    .row-about .main-about-item .main-about-item-wrapper {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+        padding-bottom: 0;
+        line-height: 1.8rem;
+    }
 }
 
 @media (max-width: 424px) {
     .main-hero-container .main-hero-picture img {
         margin-top: 0;
+        max-width: 100%;
+    }
+
+    .main-about-item picture img {
         max-width: 100%;
     }
 }

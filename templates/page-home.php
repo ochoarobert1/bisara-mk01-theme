@@ -24,6 +24,45 @@
                 </div>
             </div>
         </section>
+
+        <section id="about" class="main-about-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="container">
+                <div class="row row-about align-items-start justify-content-between">
+                    <?php $arr_about = get_post_meta(get_the_ID(), 'bsr_home_about_group', true); ?>
+                    <?php if (!empty($arr_about)) : ?>
+                        <?php $i = 1; ?>
+                        <?php foreach ($arr_about as $item) { ?>
+                            <article class="main-about-item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <?php if ($i <= 1) { ?>
+                                    <div class="main-about-item-wrapper">
+                                        <h2><?php echo $item['title']; ?></h2>
+                                        <?php echo apply_filters('the_content', $item['desc']); ?>
+                                    </div>
+                                    <picture>
+                                        <?php $bg_banner = wp_get_attachment_image_src($item['bg_image_id'], 'full', false); ?>
+                                        <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" />
+                                    </picture>
+                                <?php } else { ?>
+                                    <picture class="d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                        <?php $bg_banner = wp_get_attachment_image_src($item['bg_image_id'], 'full', false); ?>
+                                        <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" />
+                                    </picture>
+                                    <div class="main-about-item-wrapper">
+                                        <h2><?php echo $item['title']; ?></h2>
+                                        <?php echo apply_filters('the_content', $item['desc']); ?>
+                                    </div>
+                                    <picture class="d-xl-none d-lg-none d-md-none d-sm-block d-block">
+                                        <?php $bg_banner = wp_get_attachment_image_src($item['bg_image_id'], 'full', false); ?>
+                                        <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" class="img-fluid" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" />
+                                    </picture>
+                                <?php } ?>
+                            </article>
+                        <?php $i++;
+                        } ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
     </div>
 </main>
 <?php get_footer(); ?>

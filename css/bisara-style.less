@@ -98,7 +98,7 @@ a {
             font-family: @secondfont;
             color: @black;
             text-transform: uppercase;
-            font-weight: 900;
+            font-weight: 700;
             font-size: 0.9rem;
 
             &:hover {
@@ -198,5 +198,39 @@ a {
 
     & .main-hero-picture img {
         margin-top: -5rem;
+    }
+}
+
+.main-about-container {
+    padding: 15vh 1rem;
+}
+
+.row-about {
+    & article:nth-child(1) {
+        padding-right: 3rem;
+    }
+    & article:nth-child(2) {
+        padding-left: 3rem;
+    }
+
+    .main-about-item {
+        & picture {
+            display: block;
+        }
+
+        & .main-about-item-wrapper {
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 1rem 3rem;
+            padding-bottom: 0;
+            font-weight: 700;
+            line-height: 2.1rem;
+
+            & h2 {
+                color: @red;
+                font-weight: 700;
+                font-size: 2.3rem;
+            }
+        }
     }
 }
