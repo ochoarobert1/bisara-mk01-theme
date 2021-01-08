@@ -141,3 +141,57 @@ $cmb_home_values->add_group_field($group_field_id, array(
     )
 ));
 
+/* --------------------------------------------------------------
+    4.- HOME: SERVICES SECTION
+-------------------------------------------------------------- */
+$cmb_home_services = new_cmb2_box(array(
+    'id'            => $prefix . 'home_services_metabox',
+    'title'         => esc_html__('Home: Servicios Principal', 'tisserie'),
+    'object_types'  => array('page'),
+    'show_on'      => array('key' => 'page-template', 'value' => 'templates/page-home.php'),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true,
+    'cmb_styles' => true,
+    'closed'     => false
+));
+
+$cmb_home_services->add_field( array(
+    'id'   => $prefix . 'home_services_image',
+    'name'      => esc_html__( 'Imagen de Fondo de la Sección', 'tisserie' ),
+    'desc'      => esc_html__( 'Cargar un fondo para esta sección', 'tisserie' ),
+    'type'    => 'file',
+
+    'options' => array(
+        'url' => false
+    ),
+    'text'    => array(
+        'add_upload_file_text' => esc_html__( 'Cargar Imagen de Fondo', 'tisserie' ),
+    ),
+    'query_args' => array(
+        'type' => array(
+            'image/gif',
+            'image/jpeg',
+            'image/png'
+        )
+    ),
+    'preview_size' => 'medium'
+) );
+
+$cmb_home_services->add_field( array(
+    'id'   => $prefix . 'home_services_title',
+    'name'      => esc_html__( 'Título de la Sección', 'tisserie' ),
+    'desc'      => esc_html__( 'Ingrese el Título de la Sección', 'tisserie' ),
+    'type' => 'text'
+) );
+
+$cmb_home_services->add_field( array(
+    'id'   => $prefix . 'home_services_desc',
+    'name'      => esc_html__( 'Descripción de la Sección', 'tisserie' ),
+    'desc'      => esc_html__( 'Ingrese la Descripción de la Sección', 'tisserie' ),
+    'type' => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 2),
+        'teeny' => false
+    )
+) );

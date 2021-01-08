@@ -39,10 +39,19 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
     padding-left: 1rem;
   }
   .row-about .main-about-item .main-about-item-wrapper {
-    font-size: 1.3rem;
-    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    padding: 1rem 1rem;
     padding-bottom: 0;
-    line-height: 2.3rem;
+    line-height: 1.8rem;
+  }
+  .main-services-container .main-services-content .main-services-content-wrapper {
+    font-size: 1.1rem;
+    padding-right: 1rem;
+  }
+  .main-services-container .main-services-content h2 {
+    font-size: 2.5rem;
+    text-indent: 1rem;
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 767px) {
@@ -70,10 +79,16 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
   .main-about-item picture img {
     max-width: 70%;
   }
+  .main-values-container .main-values-item {
+    margin-bottom: 2.5rem;
+  }
   .main-values-container .main-values-item .media-body h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 600;
+  }
+  .main-services-container {
+    padding: 5vh 1rem;
   }
 }
 /* --------------------------------------------------------------
