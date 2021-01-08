@@ -70,6 +70,11 @@ MEDIAQUERIES SM - LAYOUTS BIGGER THAN 768px
   .main-about-item picture img {
     max-width: 70%;
   }
+  .main-values-container .main-values-item .media-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
 }
 /* --------------------------------------------------------------
 MEDIAQUERIES XS - LAYOUTS LESS THAN 600px

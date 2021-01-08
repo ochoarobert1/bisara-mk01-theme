@@ -63,6 +63,37 @@
                 </div>
             </div>
         </section>
+
+        <section id="values" class="main-values-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="main-values-title col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h2><?php _e('Valores', 'bisara'); ?></h2>
+                    </div>
+                    <?php $arr_values = get_post_meta(get_the_ID(), 'bsr_home_values_group', true); ?>
+                    <?php if (!empty($arr_values)) : ?>
+                        <?php $i = 1; ?>
+                        <?php foreach ($arr_values as $item) { ?>
+                            <article class="main-values-item col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="media">
+                                    <?php $bg_banner = wp_get_attachment_image_src($item['bg_image_id'], 'avatar', false); ?>
+                                    <img itemprop="image" content="<?php echo $bg_banner[0]; ?>" src="<?php echo $bg_banner[0]; ?>" title="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" alt="<?php echo get_post_meta($item['bg_image_id'], '_wp_attachment_image_alt', true); ?>" class="img-fluid align-self-start" width="<?php echo $bg_banner[1]; ?>" height="<?php echo $bg_banner[2]; ?>" data-aos="fade" data-aos-delay="<?php echo $delay; ?>" />
+                                    <div class="media-body">
+                                        <h3><?php echo $item['title']; ?></h3>
+                                        <?php echo apply_filters('the_content', $item['desc']); ?>
+                                    </div>
+                                </div>
+                            </article>
+                        <?php $i++;
+                        } ?>
+                    <?php endif; ?>
+
+
+                </div>
+            </div>
+
+
+        </section>
     </div>
 </main>
 <?php get_footer(); ?>

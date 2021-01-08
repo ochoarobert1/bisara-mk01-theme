@@ -192,3 +192,29 @@ a:hover {
   font-weight: 700;
   font-size: 2.3rem;
 }
+.main-values-container {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 5vh 1rem;
+}
+.main-values-container .main-values-title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.main-values-container .main-values-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.main-values-container .main-values-item {
+  margin-bottom: 1.5rem;
+}
+.main-values-container .main-values-item .media-body {
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.main-values-container .main-values-item .media-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}

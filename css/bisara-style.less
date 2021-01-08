@@ -209,6 +209,7 @@ a {
     & article:nth-child(1) {
         padding-right: 3rem;
     }
+
     & article:nth-child(2) {
         padding-left: 3rem;
     }
@@ -230,6 +231,38 @@ a {
                 color: @red;
                 font-weight: 700;
                 font-size: 2.3rem;
+            }
+        }
+    }
+}
+
+.main-values-container {
+    background-color: @black;
+    color: @white;
+    padding: 5vh 1rem;
+
+    & .main-values-title {
+        text-align: center;
+        padding-bottom: 3rem;
+
+        & h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+    }
+
+    & .main-values-item {
+        margin-bottom: 1.5rem;
+
+        & .media-body {
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+
+            & h3 {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                font-weight: 600;
             }
         }
     }
