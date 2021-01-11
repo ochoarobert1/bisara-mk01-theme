@@ -54,10 +54,10 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="header-mobile-social-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-xl-none d-lg-none d-md-block d-sm-block d-block">
-                            <a href=""><i class="fa fa-instagram"></i></a>
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/bisaradigital/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://twitter.com/bisaradigital" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/Bisara-Digital-102043414863432/" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
                         </div>
                         <div class="header-left col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
                             <a href="<?php echo home_url('/'); ?>" title="<?php echo get_bloginfo('name'); ?>">
@@ -88,10 +88,10 @@
                                     ?>
                                 </nav>
                                 <div class="header-social-container d-xl-block d-lg-block d-md-none d-sm-none d-none">
-                                    <a href=""><i class="fa fa-instagram"></i></a>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                    <a href=""><i class="fa fa-youtube-play"></i></a>
+                                    <a href="https://www.instagram.com/bisaradigital/" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://twitter.com/bisaradigital" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/Bisara-Digital-102043414863432/" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
                                 </div>
                             </div>
                         </div>

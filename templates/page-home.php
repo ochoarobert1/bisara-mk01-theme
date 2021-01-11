@@ -97,7 +97,7 @@
                     <article class="main-services-content col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2><?php echo get_post_meta(get_the_ID(), 'bsr_home_services_title', true); ?></h2>
                         <div class="main-services-content-wrapper">
-                            <?php echo apply_filters( 'the_content', get_post_meta(get_the_ID(), 'bsr_home_services_desc', true) ); ?>
+                            <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'bsr_home_services_desc', true)); ?>
                         </div>
                     </article>
                     <picture class="main-services-image col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -107,9 +107,24 @@
                     </picture>
                 </div>
             </div>
-
-
         </section>
+
+        <section id="contact" class="main-contact-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="main-contact-title col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h2><?php _e('Para más información contáctenos', 'bisara'); ?></h2>
+                    </div>
+                    <article class="main-contact-content col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
+                        <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'bsr_home_contact_desc', true)); ?>
+                    </article>
+                    <div class="main-contact-form col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
+                        <?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'bsr_home_contact_form', true)); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 </main>
 <?php get_footer(); ?>

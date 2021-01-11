@@ -195,3 +195,40 @@ $cmb_home_services->add_field( array(
         'teeny' => false
     )
 ) );
+
+/* --------------------------------------------------------------
+    5.- HOME: CONTACT SECTION
+-------------------------------------------------------------- */
+$cmb_home_contact = new_cmb2_box(array(
+    'id'            => $prefix . 'home_contact_metabox',
+    'title'         => esc_html__('Home: Contacto Principal', 'tisserie'),
+    'object_types'  => array('page'),
+    'show_on'      => array('key' => 'page-template', 'value' => 'templates/page-home.php'),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true,
+    'cmb_styles' => true,
+    'closed'     => false
+));
+
+$cmb_home_contact->add_field( array(
+    'id'   => $prefix . 'home_contact_desc',
+    'name'      => esc_html__( 'Descripción de la Sección', 'tisserie' ),
+    'desc'      => esc_html__( 'Ingrese la Descripción de la Sección', 'tisserie' ),
+    'type' => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 2),
+        'teeny' => false
+    )
+) );
+
+$cmb_home_contact->add_field( array(
+    'id'   => $prefix . 'home_contact_form',
+    'name'      => esc_html__( 'Formulario de la Sección', 'tisserie' ),
+    'desc'      => esc_html__( 'Ingrese el Formulario de la Sección', 'tisserie' ),
+    'type' => 'wysiwyg',
+    'options' => array(
+        'textarea_rows' => get_option('default_post_edit_rows', 2),
+        'teeny' => false
+    )
+) );

@@ -152,6 +152,39 @@ a:hover {
 /* --------------------------------------------------------------
 2.- FOOTER
 -------------------------------------------------------------- */
+.the-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2.5rem;
+}
+.the-footer .footer-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 1.3rem;
+}
+.the-footer .footer-item ul li h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.the-footer .footer-item ul li a {
+  color: #ffffff;
+}
+.the-footer .footer-item ul li a:hover {
+  color: #B70000;
+}
+.the-footer .footer-item ul li .textwidget {
+  font-size: 0.9rem;
+}
+.the-footer .footer-item ul li .menu {
+  padding: 0 !important;
+}
+.the-footer .footer-item ul li .menu a {
+  padding-left: 0 !important;
+}
+.the-footer .footer-item ul li .menu a:hover {
+  color: #B70000 !important;
+}
 /* --------------------------------------------------------------
 3.- HOME
 -------------------------------------------------------------- */
@@ -231,4 +264,56 @@ a:hover {
   font-size: 1.4rem;
   padding-right: 2.5rem;
   font-weight: 400;
+}
+.main-contact-container {
+  padding: 10vh 1rem;
+}
+.main-contact-container .main-contact-title {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.main-contact-container .main-contact-content {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.main-contact-container .main-contact-content a {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 1.5rem 0;
+  display: block;
+}
+.main-contact-container .main-contact-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.shortcode-social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shortcode-social-container a {
+  color: #B70000 !important;
+  margin: 0 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.custom-form-control-container {
+  margin-bottom: 1rem;
+}
+.custom-form-control-container label {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  width: 100%;
+}
+.custom-form-control-container .btn-submit {
+  font-family: 'Open Sans', sans-serif;
+  background: white;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
 }

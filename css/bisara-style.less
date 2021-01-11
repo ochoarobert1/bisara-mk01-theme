@@ -181,6 +181,51 @@ a {
 /* --------------------------------------------------------------
 2.- FOOTER
 -------------------------------------------------------------- */
+.the-footer {
+    background-color: @black;
+    color: @white;
+    padding: 2.5rem;
+
+    & .footer-item {
+        & ul {
+            list-style: none;
+            margin: 0;
+            padding: 1.3rem;
+
+            & li {
+                & h2 {
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                }
+
+                & a {
+                    color: @white;
+
+                    &:hover {
+                        color: @red;
+                    }
+                }
+
+                & .textwidget {
+                    font-size: .9rem;
+                }
+
+                & .menu {
+                    padding: 0 !important;
+
+                    & a {
+                        padding-left: 0 !important;
+
+                        &:hover {
+                            color: @red !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* --------------------------------------------------------------
 3.- HOME
@@ -284,5 +329,68 @@ a {
             padding-right: 2.5rem;
             font-weight: 400;
         }
+    }
+}
+
+.main-contact-container {
+    padding: 10vh 1rem;
+
+    & .main-contact-title {
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+
+    & .main-contact-content {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+
+        a {
+            color: black;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 1.5rem 0;
+            display: block;
+        }
+
+        & h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.shortcode-social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+        color: @red  !important;
+        margin: 0 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+.custom-form-control-container {
+    margin-bottom: 1rem;
+
+    & label {
+        font-family: @secondfont;
+        display: inline-block;
+        margin-bottom: .8rem;
+        width: 100%;
+    }
+
+    & .btn-submit {
+        font-family: @secondfont;
+        background: white;
+        border: 2px solid black;
+        border-radius: 0;
+        width: 100%;
+        padding: 1rem;
+        font-weight: 700;
+
     }
 }
