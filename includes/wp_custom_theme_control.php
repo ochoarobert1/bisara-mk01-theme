@@ -86,6 +86,23 @@ function bisara_customize_register( $wp_customize ) {
         'label' => __( 'YouTube', 'bisara' ),
     ) );
 
+    $wp_customize->add_setting('bsr_social_settings[email]', array(
+        'default'           => '',
+        'sanitize_callback' => '',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'email', array(
+        'type' => 'email',
+        'section' => 'bsr_social_settings',
+        'settings' => 'bsr_social_settings[email]',
+        'label' => __( 'Correo Electrónico', 'bisara' ),
+    ) );
+
+    
+
     /* COOKIES SETTINGS */
     $wp_customize->add_section('bsr_cookie_settings', array(
         'title'    => __('Cookies', 'bisara'),

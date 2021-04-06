@@ -156,12 +156,14 @@ if (function_exists('add_image_size')) {
 function shortcode_redes()
 {
     ob_start();
+    $social_options = get_option('bsr_social_settings');
 ?>
     <div class="shortcode-social-container">
         <a href="https://www.instagram.com/bisaradigital/" target="_blank"><i class="fa fa-instagram"></i></a>
         <a href="https://twitter.com/bisaradigital" target="_blank"><i class="fa fa-twitter"></i></a>
         <a href="https://www.facebook.com/Bisara-Digital-102043414863432/" target="_blank"><i class="fa fa-facebook"></i></a>
         <a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
+        <a href="mailto:<?php echo $social_options['email']; ?>" target="_blank"><i class="fa fa-envelope-o"></i></a>
     </div>
 <?php
     $content = ob_get_clean();
